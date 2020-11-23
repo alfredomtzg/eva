@@ -1,12 +1,24 @@
 
-import React, {useContext} from 'react'
+import React from 'react'
+// material
+import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core/styles';
 
+// components
 import Image from '../../components/Image'
 import ImageList from '../../components/ImageList'
-import {Context} from '../../utils/Context'
+
+// 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  
+}));
 
 export default function Home() {
-   const {carruselImage} = useContext(Context)
+
+  const classes = useStyles();
  
   const takePictore = async (img) => {
     
@@ -25,10 +37,17 @@ export default function Home() {
     console.log(fecha);
   }
   return (
-    <>
-      <Image printDate={printDate}/>
-      <ImageList/>
-      
-    </>
+    <div className={classes.root}>
+      <Grid container spacing={1}>
+        <Grid item xs={12} sm={6}>
+          <ImageList/>
+        </Grid>
+        
+        <Grid item xs={12} sm={6}>
+          <Image printDate={printDate}/>
+        </Grid>
+        
+      </Grid>
+    </div>
   )
 }
