@@ -8,6 +8,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Image from '../../components/Image'
 import ImageList from '../../components/ImageList'
 import SnackBar from '../../components/SnackBar'
+import AppBarMenu from '../../components/AppBarMenu';
 
 // 
 const useStyles = makeStyles((theme) => ({
@@ -38,8 +39,10 @@ export default function Home() {
     console.log(fecha);
   }
   return (
-    <div className={classes.root}>
-      <Grid container spacing={1}>
+    <>
+    <AppBarMenu title="Diagnostico"/>
+      <div className={classes.root}>
+      <Grid container spacing={1} justify="space-evenly">
         <Grid item xs={12} sm={6}>
           <ImageList/>
         </Grid>
@@ -50,5 +53,6 @@ export default function Home() {
         <SnackBar/>
       </Grid>
     </div>
+    </>
   )
 }

@@ -1,4 +1,5 @@
 import React, {useContext} from 'react';
+// Material
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -8,6 +9,8 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import PhotoCamera from '@material-ui/icons/PhotoCamera';
+import Button from '@material-ui/core/Button'
+// Context
 import {Context } from '../../utils/Context'
 
 
@@ -35,10 +38,12 @@ export default function Image({printDate}) {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Please, take a pictore
+            Please, take a pictore 
+            
           </Typography>
           
         </CardContent>
+
       </CardActionArea>
       <CardActions>
         <IconButton onClick={()=> {
