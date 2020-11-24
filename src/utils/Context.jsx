@@ -23,6 +23,18 @@ export const ContextProvider = ({ children }) => {
       risk: "low",
     },
   ])
+  // SnackBar
+  const [openSnackBar, setOpenSnackBar] = useState(false);
+  const [severityValue, setSeverityValue] = useState("success")
+  // SnackBar handleClose
+  const handleCloseAlert = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setOpenSnackBar(false);
+  };
+
+
  // return Value
   return (
     <Context.Provider
@@ -30,7 +42,12 @@ export const ContextProvider = ({ children }) => {
         carruselImage, 
         setCarruselImage,
         image, 
-        setImage
+        setImage,
+        openSnackBar,
+        setOpenSnackBar,
+        severityValue, 
+        setSeverityValue,
+        handleCloseAlert
       }}
     >
       {children}

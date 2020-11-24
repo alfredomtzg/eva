@@ -7,6 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 // components
 import Image from '../../components/Image'
 import ImageList from '../../components/ImageList'
+import SnackBar from '../../components/SnackBar'
 
 // 
 const useStyles = makeStyles((theme) => ({
@@ -46,7 +47,7 @@ export default function Home() {
         <Grid item xs={12} sm={6}>
           <Image printDate={printDate}/>
         </Grid>
-        
+        <SnackBar/>
       </Grid>
     </div>
   )
