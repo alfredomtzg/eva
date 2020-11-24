@@ -27,9 +27,7 @@ const useStyles = makeStyles((theme) => ({
   title: {
     color: theme.palette.primary.light,
   },
-  list: {
-    height: '100',
-  },
+  
   titleBar: {
     background:
       'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
@@ -48,7 +46,7 @@ export default function ImageList() {
       <GridList className={classes.gridList} cols={2.5}>
         {carruselImage.map((item, index) => (
             
-          <GridListTile className={classes.list} key={index} >
+          <GridListTile cols={2} key={index} >
 
             <img src={item.image} alt="photos" />
             

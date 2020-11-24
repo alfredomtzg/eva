@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -8,6 +8,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import PhotoCamera from '@material-ui/icons/PhotoCamera';
+import {Context } from '../../utils/Context'
 
 
 const useStyles = makeStyles({
@@ -20,6 +21,7 @@ const useStyles = makeStyles({
 });
 
 export default function Image({printDate}) {
+  const {setOpenSnackBar,setSeverityValue} = useContext(Context)
   const classes = useStyles();
 
   return (
@@ -39,7 +41,12 @@ export default function Image({printDate}) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <IconButton onClick={()=> printDate()} color="primary" aria-label="upload picture" component="span">
+        <IconButton onClick={()=> {
+          printDate();
+          setSeverityValue('success');
+          setOpenSnackBar(true)
+        } 
+          } color="primary" aria-label="upload picture" component="span">
           <PhotoCamera />
         </IconButton>
       </CardActions>

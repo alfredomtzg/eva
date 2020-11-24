@@ -25,7 +25,9 @@ export const ContextProvider = ({ children }) => {
   ])
   // SnackBar
   const [openSnackBar, setOpenSnackBar] = useState(false);
-  const [severityValue, setSeverityValue] = useState("success")
+  const [severityValue, setSeverityValue] = useState("success");
+  const [snackBarMessage, setSnackBarMessage]= useState('image taken successfully')
+
   // SnackBar handleClose
   const handleCloseAlert = (event, reason) => {
     if (reason === 'clickaway') {
@@ -47,7 +49,9 @@ export const ContextProvider = ({ children }) => {
         setOpenSnackBar,
         severityValue, 
         setSeverityValue,
-        handleCloseAlert
+        handleCloseAlert,
+        snackBarMessage, 
+        setSnackBarMessage
       }}
     >
       {children}

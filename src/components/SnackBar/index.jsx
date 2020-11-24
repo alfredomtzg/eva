@@ -21,19 +21,18 @@ const useStyles = makeStyles((theme) => ({
 
 
 const SnackBar = () =>{
-const {openSnackBar, severityValue,handleCloseAlert} = useContext(Context);
+const {openSnackBar, severityValue, handleCloseAlert, snackBarMessage} = useContext(Context);
   const classes = useStyles();
 
 
   
-
   
 
   return (
     <div className={classes.root}>
-      <Snackbar open={openSnackBar} autoHideDuration={3000} onClose={handleCloseAlert}>
+      <Snackbar open={openSnackBar} autoHideDuration={1000} onClose={handleCloseAlert}>
         <Alert onClose={handleCloseAlert} severity={severityValue}>
-          This is a success message!
+          {snackBarMessage} 
         </Alert>
       </Snackbar>
   </div>
