@@ -1,4 +1,6 @@
 # In order to use this app you have to visit the following link:
+Deploy Heroku: https://evaappalfredo.herokuapp.com/
+Deploy Gh- pages: https://alfredomtzg.github.io/eva/
 # Work process:
 Definition of architecture
 Screens and functionalities
