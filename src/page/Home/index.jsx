@@ -9,7 +9,7 @@ import Image from '../../components/Image'
 import ImageList from '../../components/ImageList'
 import SnackBar from '../../components/SnackBar'
 import AppBarMenu from '../../components/AppBarMenu';
-import BackDrop from '../../components/BackDrop'
+import BackDrop from '../../components/Backdrops'
 //Context
 import { Context } from '../../utils/Context';
 

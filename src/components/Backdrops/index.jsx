@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function BackDrop() {
+export default function BackDrops() {
   const {open, setOpen} = useContext(Context)
   const classes = useStyles();
   // const [open, setOpen] = React.useState(false);
