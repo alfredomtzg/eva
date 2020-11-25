@@ -1,31 +1,22 @@
 import React from 'react';
+// Router
+import { Link } from 'react-router-dom';
 // Material
-import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import CancelIcon from '@material-ui/icons/Cancel';
-import { Link } from 'react-router-dom';
+import {useStyles} from '../Style'
+
 import { Grid } from '@material-ui/core';
+// Logo
 import Logo from '../../assets/logo/eva_logo.png'
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    color:' #fff',
-  },
-  menuButton: {
-    marginRight: theme.spacing(1),
-    textDecoration: 'none',
-  },
-  title: {
-    flexGrow: 1,
-  },
-}));
 
-export default function AppBarMenu({title}) {
+
+export default function AppBarMenu({title, landing}) {
   const classes = useStyles();
 
   return (
@@ -44,12 +35,15 @@ export default function AppBarMenu({title}) {
               <Typography variant="h6" className={classes.title}>
                 {title}
               </Typography>
-
-              <Link to={'/'} className={classes.menuButton}>
+              {(landing) 
+              ? null
+              :<Link to={'/'} className={classes.menuButton}>
                 <Button >
                   <CancelIcon />
                 </Button>
               </Link>
+              }
+              
               
             </Toolbar>
           </AppBar>

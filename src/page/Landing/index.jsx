@@ -2,7 +2,9 @@ import React, {useState, useContext} from 'react'
 // Material
 import Grid from '@material-ui/core/Grid'
 import AppBarMenu from '../../components/AppBarMenu'
-import {FormControl, FormLabel, TextField, FormHelperText} from '@material-ui/core'
+import {FormControl,  TextField, FormHelperText, Typography} from '@material-ui/core'
+// Components
+import Image from '../../components/Image'
 // Style
 import './index.css'
 // Context
@@ -17,7 +19,7 @@ export default function Landing() {
 
   return (
     < >
-      <AppBarMenu title="Bienvenido"/>
+      <AppBarMenu title="Bienvenido" landing/>
     <Grid container direction="row" justify="center" alignItems="center" spacing={1} className="containerScreen" >
       <Grid  item  sm={6} xs={12}  >
         <FormControl>
@@ -37,7 +39,8 @@ export default function Landing() {
       </Grid>
       
       <Grid   item  sm={6} xs={12}  >
-        foto {valueName}
+        
+        <Image  buttonContent="da click para Comenzar" image="https://images.homify.com/c_fill,f_auto,q_0,w_740/v1526483607/p/photo/image/2561426/3.jpg"/>
         
       </Grid>
     </Grid>

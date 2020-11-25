@@ -1,3 +1,36 @@
+# In order to use this app you have to visit the following link:
+# Work process:
+Definition of architecture
+Screens and functionalities
+# -Content
+--Name or logo
+--Indications
+--Call to action (Start)
+--Image
+--Text field (name)
+# -Loading
+--Connecting with camera
+--BackDrop animation
+# -Diagnosis
+--Image camera
+--Temperature
+--- Risk (Three Differentiators: Uppercase, Color, Growing Bar)
+--Call to action (Capture image)
+--Go to the gallery
+--Risk factor
+# -Alerts
+--Indication to users (saved image)
+--Alert (high risk)
+--error
+# -Gallery
+--Picture list
+--Delete images
+--Download image
+--Return to diagnosis
+--End process
+--Image name
+# -View image details
+--Return Gallery
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

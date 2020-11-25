@@ -38,11 +38,16 @@ export const ContextProvider = ({ children }) => {
 
   // data paciente
   const [valueName, setValueName] =useState("");
+// BackDrop
+  const [open, setOpen] = useState(true);
+
 
  // return Value
   return (
     <Context.Provider
       value={{
+        open, 
+        setOpen,
         carruselImage, 
         setCarruselImage,
         image, 
