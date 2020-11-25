@@ -17,7 +17,7 @@ import Fondo from '../../assets/imageGray.png'
 
 
 
-export default function Image({printDate, buttonContent, image="../../assets(imageGary.png" }) {
+export default function Image({printDate, buttonContent, image }) {
   const {setOpenSnackBar,setSeverityValue, } = useContext(Context)
   
   const classes = useStyles();
