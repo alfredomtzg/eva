@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/page/Landing/index.css"],"names":[],"mappings":"AAAA,iBACE,YAAc,CACd,UAAW,CACX,iBACF","file":"6.51834223.chunk.css","sourcesContent":[".containerScreen{\n  height:  100vh;\n  width: 100%;\n  text-align: center;\n}"]}

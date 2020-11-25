@@ -1,0 +1,2 @@
+(this.webpackJsonpeva=this.webpackJsonpeva||[]).push([[8],{164:function(e,n,t){"use strict";t.r(n),t.d(n,"default",(function(){return i}));var a=t(3);t(0);function i(){return Object(a.jsx)("div",{children:"soy la galeria"})}}}]);
+//# sourceMappingURL=8.e6eaef47.chunk.js.map

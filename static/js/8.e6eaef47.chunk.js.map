@@ -1,0 +1,1 @@
+{"version":3,"sources":["page/Galeria/index.jsx"],"names":["Galeria"],"mappings":"2JAEe,SAASA,IACtB,OACE","file":"static/js/8.e6eaef47.chunk.js","sourcesContent":["import React from 'react'\n\nexport default function Galeria() {\n  return (\n    <div>\n      soy la galeria\n      \n    </div>\n  )\n}\n"],"sourceRoot":""}
