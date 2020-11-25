@@ -1,5 +1,5 @@
 {
-  "homepage": "http://alfredomtz.github.io/eva",
+  "homepage": "https://alfredomtz.github.io/eva",
   "name": "eva",
   "version": "0.1.0",
   "private": true,
@@ -22,7 +22,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -b master -d build"
   },
   "eslintConfig": {
     "extends": [
