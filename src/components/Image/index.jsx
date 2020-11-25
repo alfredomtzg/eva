@@ -23,7 +23,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Image({printDate}) {
+export default function Image({printDate, buttonContent}) {
   const {setOpenSnackBar,setSeverityValue} = useContext(Context)
   const classes = useStyles();
 
@@ -36,24 +36,19 @@ export default function Image({printDate}) {
           image="https://fake-img-endpoint.vercel.app/api/preview"
           title="Contemplative Reptile"
         />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            Please, take a pictore 
-            
-          </Typography>
-          
-        </CardContent>
+        
 
       </CardActionArea>
       <CardActions>
-        <IconButton onClick={()=> {
+        <Button   onClick={()=> {
           printDate();
           setSeverityValue('success');
           setOpenSnackBar(true)
         } 
-          } color="primary" aria-label="upload picture" component="span">
+          }  variant="outlined" color="secondary">
           <PhotoCamera />
-        </IconButton>
+          {buttonContent}
+        </Button>
       </CardActions>
     </Card>
     

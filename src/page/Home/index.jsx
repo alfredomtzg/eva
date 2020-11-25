@@ -14,6 +14,7 @@ import AppBarMenu from '../../components/AppBarMenu';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    height: "100vh",
   },
   
 }));
@@ -42,13 +43,13 @@ export default function Home() {
     <>
     <AppBarMenu title="Diagnostico"/>
       <div className={classes.root}>
-      <Grid container spacing={1} justify="space-evenly">
+      <Grid container spacing={1}  justify="center" alignItems="center" >
         <Grid item xs={12} sm={6}>
           <ImageList/>
         </Grid>
         
         <Grid item xs={12} sm={6}>
-          <Image printDate={printDate}/>
+          <Image printDate={printDate} buttonContent="Save"/>
         </Grid>
         <SnackBar/>
       </Grid>
