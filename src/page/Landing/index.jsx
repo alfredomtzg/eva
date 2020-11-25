@@ -1,34 +1,34 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 // Material
 import Grid from '@material-ui/core/Grid'
 import AppBarMenu from '../../components/AppBarMenu'
 import {FormControl, FormLabel, TextField, FormHelperText} from '@material-ui/core'
+// Style
+import './index.css'
+// Context
+import {Context} from '../../utils/Context'
 
 export default function Landing() {
+  const {valueName, setValueName} = useContext(Context)
 
-  const [valueName, setValueName] =useState({name:""});
+  
 
-  const hangleOnChange = (e)=>{
-    console.log(e.target.value)
-
- 
-
-  }
+  
 
   return (
-    <Grid container spacing={1}>
-     
-
+    < >
       <AppBarMenu title="Bienvenido"/>
-     
-      <Grid  item xs={12} md={6}  >
+    <Grid container direction="row" justify="center" alignItems="center" spacing={1} className="containerScreen" >
+      <Grid  item  sm={6} xs={12}  >
         <FormControl>
-          <FormLabel> Nombre del Paciente</FormLabel>
+          
           <TextField
-            id=""
-            label=""
-            value=""
-            onChange={hangleOnChange}
+            autoFocus
+            required
+            label="Nombre del Paciente" 
+            variant="filled" 
+            value={valueName}
+            onChange={(event)=>{setValueName(event.target.value)}}
           />
 
           <FormHelperText>Escriba el nombre completo del paciente</FormHelperText>
@@ -36,6 +36,12 @@ export default function Landing() {
         
       </Grid>
       
+      <Grid   item  sm={6} xs={12}  >
+        foto {valueName}
+        
+      </Grid>
     </Grid>
+    </>
+
   )
 }

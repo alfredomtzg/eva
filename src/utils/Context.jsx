@@ -36,6 +36,8 @@ export const ContextProvider = ({ children }) => {
     setOpenSnackBar(false);
   };
 
+  // data paciente
+  const [valueName, setValueName] =useState("");
 
  // return Value
   return (
@@ -51,7 +53,9 @@ export const ContextProvider = ({ children }) => {
         setSeverityValue,
         handleCloseAlert,
         snackBarMessage, 
-        setSnackBarMessage
+        setSnackBarMessage,
+        valueName, 
+        setValueName
       }}
     >
       {children}
